@@ -11,6 +11,8 @@ RUN mkdir -p /var/www/stremio-web
 WORKDIR /var/www/stremio-web
 COPY . /var/www/stremio-web
 RUN npm install 
+RUN npm install -g webpack
+RUN npm install --save-dev webpack
 RUN npm install -g http-server
 
 # Bundle app source
